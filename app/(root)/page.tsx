@@ -21,20 +21,20 @@ const page = () => {
         <Carousel>
           <CarouselContent>
             <CarouselItem>
-              <div className="grid grid-cols-4">
+              <div className="grid grid-cols-4 gap-5">
                 <img
-                  src={data?.data.images.webp.small_image_url || ''}
-                  alt={data?.data.title || 'Novel Image'}
-                  className="h-full mx-auto"
+                  src={data?.data[0].images.webp.large_image_url || ''}
+                  alt={data?.data[0].title || 'Novel Image'}
+                  className="h-full max-h-72 mx-auto"
                 />
                 <div className="flex flex-col col-span-3 gap-3">
-                  <h1 className="text-bold text-2xl">{data?.data.title}</h1>
+                  <h1 className="text-bold text-2xl">{data?.data[0].title}</h1>
                   <div className="flex flex-row gap-3">
-                    {data?.data.genres.map((item) => (
+                    {data?.data[0].genres.map((item) => (
                       <Badge key={item.mal_id}>{item.name} </Badge>
                     )) || <Badge>No Genres</Badge>}
                   </div>
-                  <p>{data?.data.synopsis}</p>
+                  <p>{data?.data[0].synopsis}</p>
                 </div>
               </div>
             </CarouselItem>
