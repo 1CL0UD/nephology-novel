@@ -17,7 +17,9 @@ const Header = () => {
             alt="Nephology Logo"
           />
         </Link>
-        <Link href="/">Nephology</Link>
+        <Link href="/" className="hidden sm:block">
+          Nephology
+        </Link>
         <Input placeholder="Search Novel"></Input>
         <div className="flex w-32 justify-end gap-3">
           <SignedIn>
