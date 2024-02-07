@@ -75,46 +75,58 @@ interface ExternalLink {
 }
 
 interface MangaData {
-  data: {
-    mal_id: number;
-    url: string;
-    images: {
-      jpg: MangaImage;
-      webp: MangaImage;
+  pagination?: {
+    last_visible_page: number;
+    has_next_page: boolean;
+    current_page: number;
+    items: {
+      count: number;
+      total: number;
+      per_page: number;
     };
-    approved: boolean;
-    titles: MangaTitle[];
-    title: string;
-    title_english: string | null;
-    title_japanese: string;
-    title_synonyms: string[];
-    type: string;
-    chapters: number | null;
-    volumes: number | null;
-    status: string;
-    publishing: boolean;
-    published: PublishedDate;
-    score: number;
-    scored: number;
-    scored_by: number;
-    rank: number;
-    popularity: number;
-    members: number;
-    favorites: number;
-    synopsis: string;
-    background: string | null;
-    authors: Author[];
-    serializations: Serialization[];
-    genres: Genre[];
-    explicit_genres: any[]; // Assuming it's an array, you may need to define its type
-    themes: Theme[];
-    demographics: Demographic[];
-    relations: {
-      relation: string;
-      entry: RelationEntry[];
-    }[];
-    external: ExternalLink[];
   };
+  data: Data[];
+}
+
+interface Data {
+  mal_id: number;
+  url: string;
+  images: {
+    jpg: MangaImage;
+    webp: MangaImage;
+  };
+  approved: boolean;
+  titles: MangaTitle[];
+  title: string;
+  title_english: string | null;
+  title_japanese: string;
+  title_synonyms: string[];
+  type: string;
+  chapters: number | null;
+  volumes: number | null;
+  status: string;
+  publishing: boolean;
+  published: PublishedDate;
+  score: number;
+  scored: number;
+  scored_by: number;
+  rank: number;
+  popularity: number;
+  members: number;
+  favorites: number;
+  synopsis: string;
+  background: string | null;
+  authors: Author[];
+  serializations: Serialization[];
+  genres: Genre[];
+  explicit_genres: any[]; // Assuming it's an array, you may need to define its type
+  themes: Theme[];
+  demographics: Demographic[];
+  relations?: {
+    relation: string;
+    entry: RelationEntry[];
+  }[];
+  external?: ExternalLink[];
 }
 
 export default MangaData;
