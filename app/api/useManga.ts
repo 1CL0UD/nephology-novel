@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import yumemiru from '../mock-data/yumemiru';
 import MangaData from '../types/manga';
+import topManga from '../mock-data/topManga';
 
 export const fetchData = async (): Promise<MangaData> => {
   try {
     // const response = await apiClient.get<Data>('/manga');
-    const response = { data: yumemiru, isLoading: false, error: null };
+    const response = { data: topManga, isLoading: false, error: null };
     return response.data;
   } catch (error) {
     throw new Error('Failed to fetch data');
