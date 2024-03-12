@@ -16,7 +16,7 @@ interface Props {
 const PopularNovelCarousel = ({ data }: Props) => {
   return (
     <>
-      <h1 className="text-2xl">Popular Novels</h1>
+      <h1 className="text-2xl mb-2">Popular Novels</h1>
       <div className="wrapper">
         <Carousel>
           <CarouselContent>
