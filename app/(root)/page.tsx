@@ -2,6 +2,7 @@
 import React from 'react';
 import useManga from '../api/useManga';
 import PopularNovelCarousel from '@/components/homepage/PopularNovelCarousel';
+import LatestUpdates from '@/components/homepage/LatestUpdates';
 
 const page = () => {
   const { data, loading, error } = useManga();
@@ -9,6 +10,7 @@ const page = () => {
   return (
     <div className="wrapper">
       <PopularNovelCarousel data={data} />
+      <LatestUpdates />
     </div>
   );
 };
