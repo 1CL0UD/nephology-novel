@@ -7,6 +7,7 @@ export default authMiddleware({
   publicRoutes: [
     '/',
     '/latest',
+    '/novel',
     '/novels/:id',
     '/api/webhooks/clerk',
     '/api/webhook/stripe',
