@@ -10,7 +10,7 @@ const page = () => {
   return (
     <div className="wrapper">
       <PopularNovelCarousel data={data} />
-      <LatestUpdates data={data} />
+      <LatestUpdates data={data} show={8} />
     </div>
   );
 };
