@@ -18,9 +18,6 @@ interface Props {
 const LatestUpdates = ({ data, show }: Props) => {
   return (
     <>
-      <a href="/latest">
-        <h1 className="text-2xl mb-6">Latest Novels</h1>
-      </a>
       <div className="grid grid-cols-4 gap-4">
         {data?.data.map((item, index) => {
           return (
