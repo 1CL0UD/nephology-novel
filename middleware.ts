@@ -7,8 +7,7 @@ export default authMiddleware({
   publicRoutes: [
     '/',
     '/latest',
-    '/novel',
-    '/novels/:id',
+    '/novel/:title',
     '/api/webhooks/clerk',
     '/api/webhook/stripe',
     '/api/uploadthing',
