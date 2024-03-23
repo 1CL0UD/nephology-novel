@@ -12,9 +12,10 @@ import MangaData from '@/app/types/manga';
 
 interface Props {
   data: MangaData | null;
+  show: number;
 }
 
-const LatestUpdates = ({ data }: Props) => {
+const LatestUpdates = ({ data, show }: Props) => {
   return (
     <>
       <a href="/latest">
@@ -23,7 +24,7 @@ const LatestUpdates = ({ data }: Props) => {
       <div className="grid grid-cols-4 gap-4">
         {data?.data.map((item, index) => {
           return (
-            index < 8 && (
+            index < show && (
               <Card>
                 <CardHeader>
                   <Image
