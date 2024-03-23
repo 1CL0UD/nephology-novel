@@ -25,8 +25,12 @@ const page = ({ params }: { params: { preview: string } }) => {
         <div className="grid gap-4 col-span-3">
           <Card>
             <CardHeader>
-              <CardTitle className="text-2xl">{params.preview}</CardTitle>
-              <CardDescription>Berserk: The Prototype</CardDescription>
+              <CardTitle className="text-3xl capitalize">
+                {params.preview}
+              </CardTitle>
+              <CardDescription className="text-1xl capitalize">
+                Berserk: The Prototype
+              </CardDescription>
             </CardHeader>
             <CardContent>
               <p>
@@ -41,8 +45,11 @@ const page = ({ params }: { params: { preview: string } }) => {
                 armed with a massive sword and monstrous strength, will let
                 nothing stop him, not even death itself, until he is finally
                 able to take the head of the one who stripped him—and his loved
-                one—of their humanity. [Written by MAL Rewrite] Included
-                one-shot: Volume 14: Berserk: The Prototype
+                one—of their humanity.
+                <br /> <br />
+                [Written by MAL Rewrite]
+                <br /> <br />
+                Included one-shot: Volume 14: Berserk: The Prototype
               </p>
             </CardContent>
           </Card>
